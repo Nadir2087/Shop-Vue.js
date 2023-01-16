@@ -1,5 +1,7 @@
 <template>
-  
+  <div class="v-cotalog-item">
+    
+  </div>
 </template>
 
 <script>
