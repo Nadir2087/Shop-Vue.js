@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name:'v-cotalog-item'
+    name:'v-cotalog-item'
 }
 </script>
 
