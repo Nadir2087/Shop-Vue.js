@@ -1,6 +1,11 @@
 <template>
-  <vHeader/>
-  <div class="app">
+  <div class="app ">
+    <vHeader/>
+
+    <div class="container">
+      
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 <script>
@@ -16,5 +21,8 @@ export default {
 </script>
 
 <style>
-
+  .container{
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 </style>

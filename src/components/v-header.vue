@@ -5,9 +5,9 @@
             <div class="header_logo">logo</div>
                 <nav class="header_nav">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">link1</a></li>
-                        <li><a href="">link2</a></li>
+                        <li><a href="#/one">Home</a></li>
+                        <li><a href="#/two">link1</a></li>
+                        <li><a href="#/thee">link2</a></li>
                     </ul>
             </nav>
         </div>
