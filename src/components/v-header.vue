@@ -2,12 +2,19 @@
   <header class="v-header">
     <div class="container">
         <div class="header_wraper">
-            <div class="header_logo">logo</div>
+            <div class="header_logo"><a href="#/"> Notnic</a></div>
+            <div class="search">
+                <img src="../img/search.svg" alt="">
+                <input class="search_input" type="text" placeholder="Поиск">
+            </div>
                 <nav class="header_nav">
                     <ul>
-                        <li><a class="l-a" href="#/one">Главная</a></li>
-                        <li><a class="l-a" href="#/v-cotalog">Коталог</a></li>
-                        <li><a class="l-a" href="#/thee">link2</a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../img/user.svg" alt="">
+                            Войти</a></li>
+                        <li><a href="#" class="nav-link">
+                            <img src="../img/cart.svg" alt="">
+                            Корзинка</a></li>
                     </ul>
             </nav>
         </div>
@@ -34,22 +41,50 @@ export default {
                 font-size: 30px;
                 font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
                 font-weight: bold;
+                a{
+                    text-decoration: none;
+                    color: green;
+                }
+            }
+            .search{
+                display: flex;
+                align-items: center;
+                width: 600px;
+                padding: 5px;
+                margin: 0 0 0 30px;
+                border: 2px solid #000;
+                border-radius: 15px;
+                img{
+                    width: 20px;
+                    color: #c6c6c6;
+                }
+                .search_input{
+                    border: none;
+                    outline:none;
+                    width: 100%;
+                }
             }
             .header_nav ul{
                 list-style-type: none;
                 display: flex;
+                align-items:flex-end;
                 li{
-                    margin-left: 10px;
-                    a{
+                    margin-left: 15px;
+                    
+                    font-size: 15px;
+                    .nav-link{    
+                        align-items: center;
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        
                         color: #000;
                         text-decoration: none;
-                        transition: all .3s ease ;
+                        img{
+                            width:1.5em;
+                        }
                     }
-                    a:hover{
-                        color: white;
-                        background: #c6c6c6;
-                        padding: 5px;
-                    }
+
                 }
 
                 }
