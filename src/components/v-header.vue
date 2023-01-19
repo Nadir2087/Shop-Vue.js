@@ -5,9 +5,9 @@
             <div class="header_logo">logo</div>
                 <nav class="header_nav">
                     <ul>
-                        <li><a href="#/one">Home</a></li>
-                        <li><a href="#/two">link1</a></li>
-                        <li><a href="#/thee">link2</a></li>
+                        <li><a class="l-a" href="#/one">Главная</a></li>
+                        <li><a class="l-a" href="#/v-cotalog">Коталог</a></li>
+                        <li><a class="l-a" href="#/thee">link2</a></li>
                     </ul>
             </nav>
         </div>
@@ -40,6 +40,18 @@ export default {
                 display: flex;
                 li{
                     margin-left: 10px;
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                        transition: all .3s ease ;
+                    }
+                    a:hover{
+                        color: white;
+                        background: #c6c6c6;
+                        padding: 5px;
+                    }
+                }
+
                 }
             }
         }
@@ -47,5 +59,4 @@ export default {
             max-width: 1100px;
             margin: 0 auto;
         }
-    }
 </style>

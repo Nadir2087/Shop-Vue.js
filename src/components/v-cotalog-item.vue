@@ -1,6 +1,10 @@
 <template>
   <div class="v-cotalog-item">
-    
+    <img class="v-item-img" src="https://cdn.thewirecutter.com/wp-content/media/2022/07/laptop-under-500-2048px-acer-1.jpg" alt="">
+    <div class="v-item-info">
+      <h3 class="v-item-title">Title</h3>
+      <p class="plice">15$</p>
+    </div>
   </div>
 </template>
 
@@ -10,6 +14,17 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  .v-cotalog-item{
+    margin: 10px 10px;
+    width: 200px;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    cursor: pointer;
+    .v-item-img{
+      width: 200px;
+      border-bottom: 2px solid rgba(90, 90, 90, .2);
+    }
+  }
 </style>

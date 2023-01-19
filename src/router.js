@@ -1,13 +1,13 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
 import comOne from './components/comOne.vue'
-import comTwo from './components/comTwo.vue'
+import cotalog from './components/v-cotalog.vue'
 import comThee from './components/comThee.vue'
 
 export default createRouter({
     history: createWebHashHistory(),
     routes:[
         {path: '/one', component: comOne},
-        {path: '/two', component: comTwo},
+        {path: '/v-cotalog', component: cotalog},
         {path: '/thee', component: comThee}
     ]
 })
