@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "MacBook Pro (2021)",
+      "price": 1.999
+    },
+    {
+      "id": 2,
+      "title": "MacBook Air M1 (2020)",
+      "price": 1.299
+    },
+    {
+      "id": 3,
+      "title": "Dell XPS 17",
+      "price": 1.449
+    },
+    {
+      "id": 4,
+      "title": "Dell XPS 13",
+      "price": 1.250
+    },
+    {
+      "id": 5,
+      "title": "Acer Swift 3",
+      "price": 1.345
+    },
+    {
+      "id": 6,
+      "title": "Lenovo Yoga 9i",
+      "price": 1.120
+    },
+    {
+      "id": 7,
+      "title": "HP Spectre x360 14",
+      "price": 986
+    },
+    {
+      "id": 8,
+      "title": " Acer Swift 3",
+      "price": 950
+    },
+    {
+      "id": 9,
+      "title": "HP Spectre x360 14",
+      "price": 1.790
+    },
+    {
+      "id": 10,
+      "title": " Asus Chromebook Flip CX5",
+      "price": 1.595
+    }
+  ]
+}
+
