@@ -5,16 +5,19 @@
         <vCotalogItem  v-for="post in posts" :key="post.id" :product_data="post"/>
 
     </div>
+    <vCard/>
     </div>
 </template>
 
 <script>
 // import { mapGetters, mapActions } from 'vuex';
 import vCotalogItem from './v-cotalog-item.vue';
+import vCard from './v-card.vue';
 export default {
     name:'v-cotalog',
     components:{
         vCotalogItem,
+        vCard
     },
     data(){
         return{
