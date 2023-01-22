@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-
+const axios = require('axios')
 export default createStore({
     state(){
         return{
@@ -7,20 +7,18 @@ export default createStore({
         }
     },
     actions:{
-        Product(com){
-            const jso = fetch('https://jsonplaceholder.typicode.com/posts?_limit=3')
-            .then(response => response.json())
-
-            com.commit('UPDATAPRODUCTS', jso)
+        GET_CHARACTERS: async (context) => {
+            let data = await axios.get('http://localhost:3000/products');
+            context.commit('UPDATAPRODUCTS', data)
         }
     },
     mutations:{
-        UPDATAPRODUCTS(state, product){
-            state.products = product
+        UPDATAPRODUCTS:(state,data)=>{
+            state.products = data
         }
     },
     getters:{
-        allProd(state){
+        allProd: (state) => {
             return state.products
         }
     }
