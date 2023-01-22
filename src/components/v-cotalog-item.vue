@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss">
   .v-cotalog-item{
+    padding: 0 0 10px 0;
     margin: 10px 10px;
     width: 200px;
     min-height: 250px;

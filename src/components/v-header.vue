@@ -12,7 +12,7 @@
                         <li><a href="#" class="nav-link">
                             <img src="../img/user.svg" alt="">
                             Войти</a></li>
-                        <li><a href="#" class="nav-link">
+                        <li><a href="#/card" class="nav-link">
                             <img src="../img/cart.svg" alt="">
                             Корзинка</a></li>
                     </ul>
