@@ -1,5 +1,6 @@
 <template>
   <div class="v-cotalog-item">
+
     <img class="v-item-img" src="https://cdn.thewirecutter.com/wp-content/media/2022/07/laptop-under-500-2048px-acer-1.jpg" alt="">
     <div class="v-item-info">
       <h3 class="v-item-title">{{ product_data.title }}</h3>
@@ -12,11 +13,17 @@
 <script>
 export default {
   name:'v-cotalog-item',
+  data(){
+    return{
+      show: false
+    }
+  },
   props:{
     product_data:{
       type: Object,
       default(){
-        return{}
+        return{
+        }
       }
     }
   },

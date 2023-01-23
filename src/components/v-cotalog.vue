@@ -16,7 +16,8 @@ export default {
         vCotalogItem,
     },
     data(){
-        return{}
+        return{
+        }
     },
     methods:{
         ...mapActions(['ADD_TO_CARD']),
