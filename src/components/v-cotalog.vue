@@ -2,7 +2,7 @@
     <div class="v-cotalog">
     <h2>Коталог Товаров</h2>
     <div class="v-cotalog-products">
-        <vCotalogItem  v-for="post in allProd" :key="post.id" :product_data="post" @addCard="AddCard"/>
+        <vCotalogItem  v-for="post in allProd" :key="post.id" :product_data="post" @addCard="AddCard" @nowPro="nowPro"/>
     </div>
     </div>
 </template>
@@ -20,11 +20,13 @@ export default {
         }
     },
     methods:{
-        ...mapActions(['ADD_TO_CARD']),
+        ...mapActions(['ADD_TO_CARD','NOWPRODUCT']),
         AddCard(data){
             this.ADD_TO_CARD(data)
             // this.t = data
-
+        },
+        nowPro(data){
+            this.NOWPRODUCT(data)
         }
     },  
     mounted(){

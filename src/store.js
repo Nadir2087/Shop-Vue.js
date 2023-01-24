@@ -4,7 +4,8 @@ export default createStore({
     state(){
         return{
             products: [],
-            card:[]
+            card:[],
+            product_now: []
         }
     },
     actions:{
@@ -14,6 +15,9 @@ export default createStore({
         },
         ADD_TO_CARD({commit}, data){
             commit('ADDCARD',data)
+        },
+        NOWPRODUCT({commit}, data){
+            commit('NOWPRODUCT',data)
         }
     },
     mutations:{
@@ -21,8 +25,12 @@ export default createStore({
             state.products = data
         },
         ADDCARD(state,data){
-            state.card.push(data)
-        }
+            state.card.unshift(data)
+        },
+        NOWPRODUCT:(state,data)=>{
+            state.product_now = data
+        },
+
     },
     getters:{
         allProd: (state) => {
@@ -30,6 +38,9 @@ export default createStore({
         },
         allCard: (state) => {
             return state.card
+        },
+        nowPro: (state) => {
+            return state.product_now
         }
     }
 })

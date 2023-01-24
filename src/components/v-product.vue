@@ -2,9 +2,9 @@
   <div class="v-product">
     <img src="https://ae04.alicdn.com/kf/Hfaccd4d3a40f485897df3e8158c20e9dQ/MR-GREEN.jpg_640x640.jpg" alt="" class="img">
     <div class="product_info">
-        <h2 class="product_name">MacBuc 2020</h2>
+        <h2 class="product_name">{{ this.$route.params.product}}</h2>
         <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi molestias distinctio tenetur voluptas soluta impedit vero, nihil laboriosam quod, aspernatur aperiam officia laudantium. Beatae libero tenetur odio fugiat veritatis voluptatum!</p>
-        <p class="product_price">2000$</p>
+        <p class="product_price">{{ nowPro.price}}</p>
         <div class="btns">
             <a class="btn add_to_card">Добавить в Корзинку</a>
             <a class="btn pay_now">Купить сейчас</a>
@@ -16,8 +16,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
-    name:'v-product'
+    name:'v-product',
+    data(){
+        return{
+            product_info: {}
+        }
+    },
+    computed:mapGetters(['nowPro']),
+    // props:{
+    //     product_info:{
+    //         type: Object,
+    //         default(){
+    //             return{}
+    //   }
+    // }
+    // }
 }
 </script>
 
@@ -26,7 +41,7 @@ export default {
     display: flex;
     padding: 40px 0 0 0;
     .img{
-            width: 50%;
+            width: 45%;
             border-radius: 20px;
         }
     .product_info{
@@ -47,7 +62,11 @@ export default {
             width: 160px;
             border-radius: 30px;
             color: #fff;
-        }
+            transition: all .3s ease;
+            }
+            .btn:hover{
+                background: #757575;
+            }
             .add_to_card{
                 background: green;
             }
