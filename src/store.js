@@ -18,6 +18,9 @@ export default createStore({
         },
         NOWPRODUCT({commit}, data){
             commit('NOWPRODUCT',data)
+        },
+        DELITECARD({commit},index){
+            commit('REMCARD', index)
         }
     },
     mutations:{
@@ -30,6 +33,9 @@ export default createStore({
         NOWPRODUCT:(state,data)=>{
             state.product_now = data
         },
+        REMCARD:(state,index)=>{
+            state.card.splice(index,1)
+        }
 
     },
     getters:{

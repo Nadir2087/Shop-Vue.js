@@ -6,7 +6,7 @@
         <p class="plice">{{card_data.price}} $</p>
       </div>
       <div class="btn">
-        <button class="del">Удалить</button>
+        <button class="del" @click="delCard">Удалить</button>
       </div>
       
     </div>
@@ -21,6 +21,11 @@
         default(){
           return{}
         }
+      }
+    },
+    methods:{
+      delCard(){
+        this.$emit('delCard')
       }
     }
   }
@@ -38,9 +43,6 @@
       .v-item-img{
         width: 200px;
         float: left;
-      }
-      .v-item-info{
-
       }
       .del{
         padding: 5px;

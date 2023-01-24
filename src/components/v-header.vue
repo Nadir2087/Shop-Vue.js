@@ -14,7 +14,10 @@
                             Войти</a></li>
                         <li><a href="#/card" class="nav-link">
                             <img src="../img/cart.svg" alt="">
-                            Корзинка</a></li>
+                            Корзинка
+                        </a>
+                        <span class="card_count">{{ allCard.length }}</span>
+                        </li>
                     </ul>
             </nav>
         </div>
@@ -23,9 +26,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
     name:'v-header',
-    components:{},
+    computed:mapGetters(['allCard']),
 }
 </script>
 
@@ -69,6 +73,7 @@ export default {
                 display: flex;
                 align-items:flex-end;
                 li{
+                    position: relative;
                     margin-left: 15px;
                     
                     font-size: 15px;
@@ -83,6 +88,17 @@ export default {
                         img{
                             width:1.5em;
                         }
+                    }
+                    .card_count{
+                        
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        display: inline-block;
+                        padding: 2px 6px;
+                        color: #fff;
+                        border-radius: 50%;
+                        background: green;
                     }
 
                 }
