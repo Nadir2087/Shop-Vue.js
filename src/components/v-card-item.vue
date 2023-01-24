@@ -5,6 +5,10 @@
         <h3 class="v-item-title">{{ card_data.title }}</h3>
         <p class="plice">{{card_data.price}} $</p>
       </div>
+      <div class="btn">
+        <button class="del">Удалить</button>
+      </div>
+      
     </div>
   </template>
   
@@ -34,6 +38,13 @@
       .v-item-img{
         width: 200px;
         float: left;
+      }
+      .v-item-info{
+
+      }
+      .del{
+        padding: 5px;
+        
       }
     }
   </style>
