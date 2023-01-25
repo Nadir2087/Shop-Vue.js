@@ -6,7 +6,7 @@
         <p class="product_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi molestias distinctio tenetur voluptas soluta impedit vero, nihil laboriosam quod, aspernatur aperiam officia laudantium. Beatae libero tenetur odio fugiat veritatis voluptatum!</p>
         <p class="product_price">{{ nowPro.price}}</p>
         <div class="btns">
-            <a class="btn add_to_card" @click="AddCard">Добавить в Корзинку</a>
+            <a class="btn add_to_card" @click="AddCard(nowPro)">Добавить в Корзинку</a>
             <a class="btn pay_now">Купить сейчас</a>
         </div>
 
@@ -20,14 +20,12 @@ import { mapGetters, mapActions} from 'vuex';
 export default {
     name:'v-product',
     data(){
-        return{
-            product_info: {}
-        }
+        return{}
     },
     methods:{
         ...mapActions(['ADD_TO_CARD']),
-        AddCard(){
-            this.ADD_TO_CARD(this.product_info)
+        AddCard(data){
+            this.ADD_TO_CARD(data)
             // this.t = data
         },
     },
